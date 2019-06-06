@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">dhccApp</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">点击登录</string>
@@ -22,4 +22,9 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="tab1_string">标签1</string>
+    <string name="tab2_string">标签2</string>
+    <string name="tab3_string">标签3</string>
+    <string name="tab4_string">标签4</string>
+    <string name="app_name">dhccApp</string>
 </resources>
