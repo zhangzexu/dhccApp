@@ -21,57 +21,140 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_weight="1"
                     android:textColor="@color/colorHomeName"
                     android:text="晚上好!张泽旭"
                     android:fontFamily="monospace"
                     android:textSize="35sp"/>
+
                 <Button
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="30dp"
                     android:layout_marginTop="18dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="查询余额"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/button_circle_shape"
                     android:fontFamily="monospace"
-                    android:textSize="12sp"/>
+                    android:text="查询余额"
+                    android:textColor="@color/colorHomeHeadBj"
+                    android:textSize="13sp" />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginTop="25dp"
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
-                    <TextView
+                    <RelativeLayout
+                        android:id="@+id/rl_first_layout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="龙财富"
-                        android:fontFamily="monospace"
-                        android:textSize="18sp"/>
-                    <TextView
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/iv_first_home"
+                            android:src="@mipmap/finance_product_28_blue"
+                            android:tint="@color/colorHomeName"
+                            android:layout_width="40dp"
+                            android:background="@null"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="43dp" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="龙财富"
+                            android:fontFamily="monospace"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorHomeName"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_below="@+id/iv_first_home"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_second_layout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="转账"
-                        android:fontFamily="monospace"
-                        android:textSize="18sp"/>
-                    <TextView
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/iv_second_home"
+                            android:src="@mipmap/ic_home_turn_longpay"
+                            android:tint="@color/colorHomeName"
+                            android:layout_width="40dp"
+                            android:background="@null"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="43dp" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="龙财富"
+                            android:fontFamily="monospace"
+                            android:textColor="@color/colorHomeName"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_below="@+id/iv_second_home"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_third_layout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="快贷"
-                        android:fontFamily="monospace"
-                        android:textSize="18sp"/>
-                    <TextView
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/iv_third_home"
+                            android:src="@mipmap/ic_home_turn_loan"
+                            android:tint="@color/colorHomeName"
+                            android:layout_width="40dp"
+                            android:background="@null"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="43dp" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="快贷"
+                            android:fontFamily="monospace"
+                            android:textSize="12sp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/colorHomeName"
+                            android:layout_below="@+id/iv_third_home"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:id="@+id/rl_four_layout"
                         android:layout_width="0dp"
-                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="龙支付"
-                        android:fontFamily="monospace"
-                        android:textSize="18sp"/>
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+                        <ImageView
+                            android:id="@+id/iv_four_home"
+                            android:src="@mipmap/ic_home_turn_longpay"
+                            android:tint="@color/colorHomeName"
+                            android:layout_width="40dp"
+                            android:background="@null"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="43dp" />
+                        <TextView
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="龙支付"
+                            android:fontFamily="monospace"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorHomeName"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_below="@+id/iv_four_home"/>
+                    </RelativeLayout>
 
                 </LinearLayout>
             </LinearLayout>
