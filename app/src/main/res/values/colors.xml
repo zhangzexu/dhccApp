@@ -6,4 +6,6 @@
     <color name="colorHomeHeadBj">#09b6f2</color>
     <color name="colorHomeName">#FFFFFF</color>
     <color name="colorLine">#B7B7B7</color>
+    <color name="homeBarColor">#1a1927</color>
+    <color name="homeFontColor">#7a7d81</color>
 </resources>

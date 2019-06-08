@@ -1,6 +1,5 @@
 package com.dhcc.ui.login;
 
-import android.app.Activity;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
@@ -18,10 +17,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dhcc.Conts.ResultCode;
+import com.dhcc.conts.ResultCode;
 import com.dhcc.R;
-import com.dhcc.ui.login.LoginViewModel;
-import com.dhcc.ui.login.LoginViewModelFactory;
 
 public class LoginActivity extends AppCompatActivity {
 

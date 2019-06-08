@@ -1,11 +1,12 @@
 package com.dhcc;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,19 +19,25 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
-import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dhcc.Conts.RequestCode;
-import com.dhcc.Conts.ResultCode;
+import com.dhcc.adapater.ImagePagerAdapater;
+import com.dhcc.conts.RequestCode;
+import com.dhcc.conts.ResultCode;
 import com.dhcc.ui.login.LoginActivity;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TextView textToLogin ;
     private TabHost tabHost;
+    private ViewPager vpager_one;
+    private ArrayList<Integer> imageIds;
+    private ImagePagerAdapater mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +54,50 @@ public class MainActivity extends AppCompatActivity
         layoutInflater.inflate(R.layout.tab2, tabHost.getTabContentView());
         layoutInflater.inflate(R.layout.tab3, tabHost.getTabContentView());
         layoutInflater.inflate(R.layout.tab4, tabHost.getTabContentView());
+        layoutInflater.inflate(R.layout.tab5, tabHost.getTabContentView());
+
+        LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
+
+        View view1 = inflater.inflate(R.layout.home_item_tabbar, null);
+        TextView txt1 = view1.findViewById(R.id.home_item_tv);
+        ImageView iv1 = view1.findViewById(R.id.home_item_iv);
+        iv1.setImageResource(R.drawable.home_item_tabbar_selector);
+        txt1.setText("首页");
+
+        View view2 = inflater.inflate(R.layout.home_item_tabbar, null);
+        TextView txt2 = view2.findViewById(R.id.home_item_tv);
+        ImageView iv2 = view2.findViewById(R.id.home_item_iv);
+        iv2.setImageResource(R.drawable.home_item_tabbar_selector3);
+        txt2.setText("信用卡");
+
+        View view3 = inflater.inflate(R.layout.home_item_tabbar, null);
+        TextView txt3 = view3.findViewById(R.id.home_item_tv);
+        ImageView iv3= view3.findViewById(R.id.home_item_iv);
+        iv3.setImageResource(R.drawable.home_item_tabbar_selector1);
+        txt3.setText("投资理财");
+
+        View view4 = inflater.inflate(R.layout.home_item_tabbar, null);
+        TextView txt4 = view4.findViewById(R.id.home_item_tv);
+        ImageView iv4 = view4.findViewById(R.id.home_item_iv);
+        iv4.setImageResource(R.drawable.home_item_tabbar_selector4);
+        txt4.setText("贷款");
+
+        View view5 = inflater.inflate(R.layout.home_item_tabbar, null);
+        TextView txt5 = view5.findViewById(R.id.home_item_tv);
+        ImageView iv5 = view5.findViewById(R.id.home_item_iv);
+        iv5.setImageResource(R.drawable.home_item_tabbar_selector2);
+        txt5.setText("悦享生活");
         // 设置标签1的标题为“标签1”，且布局为LinearLayout1，须和layout中的布局文件tab1.xml同，下同理
-        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator("标签1")
+        tabHost.addTab(tabHost.newTabSpec("tab1").setIndicator(view1)
                 .setContent(R.id.LinearLayout1));
-        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator("标签2")
+        tabHost.addTab(tabHost.newTabSpec("tab2").setIndicator(view2)
                 .setContent(R.id.LinearLayout2));
-        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator("标签3")
+        tabHost.addTab(tabHost.newTabSpec("tab3").setIndicator(view3)
                 .setContent(R.id.LinearLayout3));
-        tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator("标签4")
+        tabHost.addTab(tabHost.newTabSpec("tab4").setIndicator(view4)
                 .setContent(R.id.LinearLayout4));
+        tabHost.addTab(tabHost.newTabSpec("tab5").setIndicator(view5)
+                .setContent(R.id.LinearLayout5));
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener(){
             @Override
             // tabId是newTabSpec参数设置的tab页名，并不是layout里面的标识符id
@@ -75,6 +117,15 @@ public class MainActivity extends AppCompatActivity
                 }
             }
         });
+
+        vpager_one = tabHost.findViewById(R.id.LinearLayout1).findViewById(R.id.vp_content);
+
+        imageIds = new ArrayList<>();
+        imageIds.add(R.mipmap.l20_ar_creditcard_banner);
+        imageIds.add(R.mipmap.l20_ar_creditcard_banner);
+        imageIds.add(R.mipmap.l20_ar_creditcard_banner);
+        mAdapter = new ImagePagerAdapater(this,imageIds);
+        vpager_one.setAdapter(mAdapter);
 
         View nav_header_main = nav_view.getHeaderView(0);
         textToLogin = nav_header_main.findViewById(R.id.textToLogin);
@@ -177,4 +228,5 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
 }

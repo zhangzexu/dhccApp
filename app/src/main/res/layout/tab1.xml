@@ -15,7 +15,7 @@
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="230dp"
                 android:background="@color/colorHomeHeadBj"
                 android:orientation="vertical">
                 <TextView
@@ -25,7 +25,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_weight="1"
                     android:textColor="@color/colorHomeName"
-                    android:text="晚上好!张泽旭"
+                    android:text="亲爱的!晓晓"
                     android:fontFamily="monospace"
                     android:textSize="35sp"/>
 
@@ -33,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="25dp"
                     android:layout_marginLeft="30dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_marginTop="0dp"
                     android:layout_marginBottom="25dp"
                     android:background="@drawable/button_circle_shape"
                     android:fontFamily="monospace"
@@ -44,7 +44,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="15dp"
                     android:orientation="horizontal">
                     <RelativeLayout
                         android:id="@+id/rl_first_layout"
@@ -56,10 +56,10 @@
                             android:id="@+id/iv_first_home"
                             android:src="@mipmap/finance_product_28_blue"
                             android:tint="@color/colorHomeName"
-                            android:layout_width="40dp"
+                            android:layout_width="35dp"
                             android:background="@null"
                             android:layout_centerHorizontal="true"
-                            android:layout_height="43dp" />
+                            android:layout_height="35dp" />
                         <TextView
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
@@ -82,18 +82,18 @@
                         android:gravity="center">
                         <ImageView
                             android:id="@+id/iv_second_home"
-                            android:src="@mipmap/ic_home_turn_longpay"
+                            android:src="@mipmap/ic_home_turn_transfer"
                             android:tint="@color/colorHomeName"
-                            android:layout_width="40dp"
+                            android:layout_width="35dp"
                             android:background="@null"
                             android:layout_centerHorizontal="true"
-                            android:layout_height="43dp" />
+                            android:layout_height="35dp" />
                         <TextView
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="龙财富"
+                            android:text="转账"
                             android:fontFamily="monospace"
                             android:textColor="@color/colorHomeName"
                             android:textSize="12sp"
@@ -111,10 +111,10 @@
                             android:id="@+id/iv_third_home"
                             android:src="@mipmap/ic_home_turn_loan"
                             android:tint="@color/colorHomeName"
-                            android:layout_width="40dp"
+                            android:layout_width="35dp"
                             android:background="@null"
                             android:layout_centerHorizontal="true"
-                            android:layout_height="43dp" />
+                            android:layout_height="35dp" />
                         <TextView
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
@@ -138,10 +138,10 @@
                             android:id="@+id/iv_four_home"
                             android:src="@mipmap/ic_home_turn_longpay"
                             android:tint="@color/colorHomeName"
-                            android:layout_width="40dp"
+                            android:layout_width="35dp"
                             android:background="@null"
                             android:layout_centerHorizontal="true"
-                            android:layout_height="43dp" />
+                            android:layout_height="35dp" />
                         <TextView
                             android:layout_marginTop="10dp"
                             android:layout_width="wrap_content"
@@ -160,39 +160,115 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
-                <TextView
+                <RelativeLayout
+                    android:id="@+id/rl_1_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="速盈"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_1_home"
+                        android:src="@mipmap/main_home_myaccount_blue"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="账户"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_1_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_2_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="理财产品"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_2_home"
+                        android:src="@mipmap/main_home_more_sy_blue"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="速盈"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_2_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_3_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="小微快贷"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_3_home"
+                        android:src="@mipmap/finace_product_21_blue_special"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="理财产品"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_3_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_4_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="付款码"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_4_home"
+                        android:src="@mipmap/main_home_more_xwkd_blue"
+                        android:tint="@color/colorHomeHeadBj"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="小微快贷"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_4_home"/>
+                </RelativeLayout>
 
             </LinearLayout>
             <View
@@ -203,46 +279,162 @@
                 android:background="@color/colorLine"></View>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="horizontal">
-                <TextView
+                <RelativeLayout
+                    android:id="@+id/rl_5_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="速盈"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_5_home"
+                        android:src="@mipmap/icon_details_query_blue"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="账单分期"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_5_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_6_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="理财产品"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_6_home"
+                        android:src="@mipmap/icon_lied_card_line_blue"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="一键绑卡"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_6_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_7_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="小微快贷"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_7_home"
+                        android:src="@mipmap/find_sr_shop_blue"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="27dp" />
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="理财产品"
+                        android:fontFamily="monospace"
+                        android:textSize="12sp"
+                        android:textColor="#000000"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_below="@+id/iv_7_home"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_8_layout"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="付款码"
-                    android:fontFamily="monospace"
-                    android:textSize="18sp"/>
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <ImageView
+                        android:id="@+id/iv_8_home"
+                        android:src="@mipmap/myaccount_add_btn"
+                        android:layout_width="20dp"
+                        android:background="@null"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="20dp" />
+
+                </RelativeLayout>
 
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="@color/colorLine"></View>
+                android:layout_height="10dp"
+                android:background="#E5E5E5"></View>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_content"
+                android:layout_width="match_parent"
+                android:layout_height="144dp">
+            </android.support.v4.view.ViewPager>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#E5E5E5"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+                <View
+                    android:layout_width="3dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="#09b6f2"
+                    android:layout_height="match_parent"></View>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="monospace"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:text="龙支付"
+                    android:textColor="#09b6f2"
+                    android:textSize="17sp"></TextView>
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:background="@color/colorLine"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/colorHomeName"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/loong_adv_left_pic"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/right_text"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
