@@ -214,7 +214,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
     private void startLogin(){
-        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        Intent intent = new Intent(MainActivity.this, LoginItemActivity.class);
         startActivityForResult(intent, RequestCode.LOGIN_CODE);
 
     }
