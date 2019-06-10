@@ -173,7 +173,7 @@
                     <ImageView
                         android:id="@+id/iv_1_home"
                         android:src="@mipmap/main_home_myaccount_blue"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -199,7 +199,7 @@
                     <ImageView
                         android:id="@+id/iv_2_home"
                         android:src="@mipmap/main_home_more_sy_blue"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -225,7 +225,7 @@
                     <ImageView
                         android:id="@+id/iv_3_home"
                         android:src="@mipmap/finace_product_21_blue_special"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -252,7 +252,7 @@
                         android:id="@+id/iv_4_home"
                         android:src="@mipmap/main_home_more_xwkd_blue"
                         android:tint="@color/colorHomeHeadBj"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -292,7 +292,7 @@
                     <ImageView
                         android:id="@+id/iv_5_home"
                         android:src="@mipmap/icon_details_query_blue"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -318,7 +318,7 @@
                     <ImageView
                         android:id="@+id/iv_6_home"
                         android:src="@mipmap/icon_lied_card_line_blue"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />
@@ -344,7 +344,7 @@
                     <ImageView
                         android:id="@+id/iv_7_home"
                         android:src="@mipmap/find_sr_shop_blue"
-                        android:layout_width="25dp"
+                        android:layout_width="30dp"
                         android:background="@null"
                         android:layout_centerHorizontal="true"
                         android:layout_height="27dp" />

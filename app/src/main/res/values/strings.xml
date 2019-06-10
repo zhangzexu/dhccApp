@@ -14,7 +14,7 @@
     <string name="menu_share">分享</string>
     <string name="menu_send">关于</string>
     <string name="title_activity_login">请登录</string>
-    <string name="prompt_email">邮件</string>
+    <string name="prompt_email">卡号</string>
     <string name="prompt_password">密码</string>
     <string name="action_sign_in">登录</string>
     <string name="action_sign_in_short">登录</string>
@@ -26,5 +26,5 @@
     <string name="tab2_string">标签2</string>
     <string name="tab3_string">标签3</string>
     <string name="tab4_string">标签4</string>
-    <string name="app_name">dhccApp</string>
+    <string name="app_name">东华金融软件</string>
 </resources>

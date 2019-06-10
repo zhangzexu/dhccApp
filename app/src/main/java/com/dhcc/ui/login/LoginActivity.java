@@ -17,12 +17,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dhcc.DbUtil.UserDBHelper;
+import com.dhcc.Entity.UserInfoEntity;
 import com.dhcc.conts.ResultCode;
 import com.dhcc.R;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
+    private UserDBHelper mHelper;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    loginViewModel.login(usernameEditText.getText().toString(),
+                    loginViewModel.login(mHelper,usernameEditText.getText().toString(),
                             passwordEditText.getText().toString());
                 }
                 return false;
@@ -108,7 +111,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loadingProgressBar.setVisibility(View.VISIBLE);
-                loginViewModel.login(usernameEditText.getText().toString(),
+                loginViewModel.login(mHelper,usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
             }
         });
@@ -126,5 +129,17 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mHelper = UserDBHelper.getInstance(this,2);
+        mHelper.openReadLink();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mHelper.close();
     }
 }

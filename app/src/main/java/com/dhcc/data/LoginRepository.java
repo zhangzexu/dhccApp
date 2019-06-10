@@ -1,5 +1,6 @@
 package com.dhcc.data;
 
+import com.dhcc.DbUtil.UserDBHelper;
 import com.dhcc.data.model.LoggedInUser;
 
 /**
@@ -43,9 +44,9 @@ public class LoginRepository {
         // @see https://developer.android.com/training/articles/keystore
     }
 
-    public Result<LoggedInUser> login(String username, String password) {
+    public Result<LoggedInUser> login(UserDBHelper mHelper , String bank_card, String password) {
         // handle login
-        Result<LoggedInUser> result = dataSource.login(username, password);
+        Result<LoggedInUser> result = dataSource.login(mHelper,bank_card, password);
         if (result instanceof Result.Success) {
             setLoggedInUser(((Result.Success<LoggedInUser>) result).getData());
         }

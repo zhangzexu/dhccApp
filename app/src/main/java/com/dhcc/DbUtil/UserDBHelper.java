@@ -108,16 +108,14 @@ public class UserDBHelper extends SQLiteOpenHelper {
     public long insert(ArrayList<UserInfoEntity> userInfoEntities){
         long result = -1;
         for (UserInfoEntity us: userInfoEntities) {
-//            ArrayList<UserInfoEntity> tempArray = new ArrayList<>();
-//            if(us.get_name()!=null&&us.get_name().length()>0){
-//                String condition = String.format("name='%s'",us.get_name());
-//                tempArray =qurey(condition);
-//                if(tempArray.size()>0){
-//                    update(us,condition);
-//                    result = tempArray.get(0).get_id();
-//                    continue;
-//                }
-//            }
+            ArrayList<UserInfoEntity> tempArray = new ArrayList<>();
+            if(us.get_bank_card()!=null&&us.get_bank_card().length()>0){
+                String condition = String.format("_bank_card='%s'",us.get_bank_card());
+                tempArray =qurey(condition);
+                if(tempArray.size()>0){
+                    continue;
+                }
+            }
             ContentValues cv = new ContentValues();
             cv.put("_name",us.get_name());
             cv.put("_phone",us.get_phone());
@@ -169,6 +167,9 @@ public class UserDBHelper extends SQLiteOpenHelper {
 
     public List<UserInfoEntity> queryByName(String name){
         return qurey(String.format("_name='%s'",name));
+    }
+    public List<UserInfoEntity> queryByBankCard(String _bank_card){
+        return qurey(String.format("_bank_card='%s'",_bank_card));
     }
 
 

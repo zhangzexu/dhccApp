@@ -36,8 +36,11 @@ public class MainActivity extends AppCompatActivity
     private TextView textToLogin ;
     private TabHost tabHost;
     private ViewPager vpager_one;
+    private ViewPager vpager_two;
     private ArrayList<Integer> imageIds;
     private ImagePagerAdapater mAdapter;
+    private ArrayList<Integer> imageIds1;
+    private ImagePagerAdapater mAdapter1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,30 +105,37 @@ public class MainActivity extends AppCompatActivity
             @Override
             // tabId是newTabSpec参数设置的tab页名，并不是layout里面的标识符id
             public void onTabChanged(String tabId) {
-                if (tabId.equals("tab1")) {   //第一个标签
-
-                    Toast.makeText(MainActivity.this, "点击标签页一", Toast.LENGTH_SHORT).show();
-                }
-                if (tabId.equals("tab2")) {   //第二个标签
-                    Toast.makeText(MainActivity.this, "点击标签页二", Toast.LENGTH_SHORT).show();
-                }
-                if (tabId.equals("tab3")) {   //第三个标签
-                    Toast.makeText(MainActivity.this, "点击标签页三", Toast.LENGTH_SHORT).show();
-                }
-                if (tabId.equals("tab4")) {   //第三个标签
-                    Toast.makeText(MainActivity.this, "点击标签页四", Toast.LENGTH_SHORT).show();
-                }
+//                if (tabId.equals("tab1")) {   //第一个标签
+//
+//                    Toast.makeText(MainActivity.this, "点击标签页一", Toast.LENGTH_SHORT).show();
+//                }
+//                if (tabId.equals("tab2")) {   //第二个标签
+//                    Toast.makeText(MainActivity.this, "点击标签页二", Toast.LENGTH_SHORT).show();
+//                }
+//                if (tabId.equals("tab3")) {   //第三个标签
+//                    Toast.makeText(MainActivity.this, "点击标签页三", Toast.LENGTH_SHORT).show();
+//                }
+//                if (tabId.equals("tab4")) {   //第三个标签
+//                    Toast.makeText(MainActivity.this, "点击标签页四", Toast.LENGTH_SHORT).show();
+//                }
             }
         });
 
         vpager_one = tabHost.findViewById(R.id.LinearLayout1).findViewById(R.id.vp_content);
-
+        vpager_two = tabHost.findViewById(R.id.LinearLayout2).findViewById(R.id.vp_content2);
         imageIds = new ArrayList<>();
         imageIds.add(R.mipmap.l20_ar_creditcard_banner);
+        imageIds.add(R.mipmap.ad_quickloan_2);
         imageIds.add(R.mipmap.l20_ar_creditcard_banner);
-        imageIds.add(R.mipmap.l20_ar_creditcard_banner);
+
+        imageIds1 = new ArrayList<>();
+        imageIds1.add(R.mipmap.ad_quickloan_1);
+        imageIds1.add(R.mipmap.ad_quickloan_2);
+        imageIds1.add(R.mipmap.advertisement1);
         mAdapter = new ImagePagerAdapater(this,imageIds);
+        mAdapter1 = new ImagePagerAdapater(this,imageIds1);
         vpager_one.setAdapter(mAdapter);
+        vpager_two.setAdapter(mAdapter1);
 
         View nav_header_main = nav_view.getHeaderView(0);
         textToLogin = nav_header_main.findViewById(R.id.textToLogin);

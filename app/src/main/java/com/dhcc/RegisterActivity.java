@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.dhcc.BaseUtil.StringUtil;
 import com.dhcc.DbUtil.UserDBHelper;
 import com.dhcc.Entity.UserInfoEntity;
+import com.dhcc.ui.login.LoginActivity;
 
 import java.util.List;
 
@@ -43,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                 List<UserInfoEntity> userInfoEntities = mHelper.queryByName(_name);
                 for (UserInfoEntity us:userInfoEntities) {
                     if(us.get_bank_card().equals(_bank_card)){
+                        if(StringUtil.isEmpty(us.get_password()))
                         if(us.get_phone().endsWith(_phone)){
                             if(StringUtil.isEmpty(_password)){
                                 Toast.makeText(RegisterActivity.this,"密码不能为空",Toast.LENGTH_LONG).show();
@@ -50,12 +52,15 @@ public class RegisterActivity extends AppCompatActivity {
                                 Toast.makeText(RegisterActivity.this,"注册成功请登录",Toast.LENGTH_LONG).show();
                                 us.set_password(_password);
                                 mHelper.update(us);
-                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                 startActivity(intent);
                             }
 
                         }else {
                             Toast.makeText(RegisterActivity.this,"预留手机号不对",Toast.LENGTH_LONG).show();
+                        }
+                        else {
+                            Toast.makeText(RegisterActivity.this,"该卡号已被注册",Toast.LENGTH_LONG).show();
                         }
                     }else {
                         Toast.makeText(RegisterActivity.this,"卡号不正确",Toast.LENGTH_LONG).show();

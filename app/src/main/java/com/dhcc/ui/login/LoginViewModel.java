@@ -5,6 +5,8 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 import android.util.Patterns;
 
+import com.dhcc.DbUtil.UserDBHelper;
+import com.dhcc.Entity.UserInfoEntity;
 import com.dhcc.data.LoginRepository;
 import com.dhcc.data.Result;
 import com.dhcc.data.model.LoggedInUser;
@@ -28,13 +30,13 @@ public class LoginViewModel extends ViewModel {
         return loginResult;
     }
 
-    public void login(String username, String password) {
+    public void login(UserDBHelper mHelper , String bank_card, String password) {
         // can be launched in a separate asynchronous job
-        Result<LoggedInUser> result = loginRepository.login(username, password);
+        Result<LoggedInUser> result = loginRepository.login(mHelper,bank_card, password);
 
         if (result instanceof Result.Success) {
-            LoggedInUser data = ((Result.Success<LoggedInUser>) result).getData();
-            loginResult.setValue(new LoginResult(new LoggedInUserView(data.getDisplayName())));
+            UserInfoEntity data = ((Result.Success<UserInfoEntity>) result).getData();
+            loginResult.setValue(new LoginResult(new LoggedInUserView(data.get_name())));
         } else {
             loginResult.setValue(new LoginResult(R.string.login_failed));
         }
@@ -54,12 +56,8 @@ public class LoginViewModel extends ViewModel {
     private boolean isUserNameValid(String username) {
         if (username == null) {
             return false;
-        }
-        if (username.contains("@")) {
-            return Patterns.EMAIL_ADDRESS.matcher(username).matches();
-        } else {
-            return !username.trim().isEmpty();
-        }
+        }else
+            return true;
     }
 
     // A placeholder password validation check

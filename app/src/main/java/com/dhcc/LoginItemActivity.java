@@ -21,5 +21,12 @@ public class LoginItemActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        findViewById(R.id.goto_register).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginItemActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
